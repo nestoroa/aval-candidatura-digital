@@ -16,10 +16,12 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Formato
 
-El formato del fichero sin firmar es el siguiente (ejemplo):
+El formato del fichero sin firmar es el siguiente:
+
 https://github.com/nestoroa/aval-candidatura-digital/blob/main/xml/aval-sin-firmar.xml
 
 La estructura y restricciones de contenido del fichero queda definido por el siguiente fichero xsd (XML Schema Definition).
+
 https://github.com/nestoroa/aval-candidatura-digital/blob/main/xml/aval-sin-firmar.xsd
 
 ## Firma
