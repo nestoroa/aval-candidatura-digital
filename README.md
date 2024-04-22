@@ -12,7 +12,12 @@ Esto es un proyecto de página web estática que permite firmar archivos XML uti
 # Licencia
 This project is licensed under the [MIT License](LICENSE).
 
-# BOE
+# (BOE) II. Especificaciones técnicas para la recogida de avales de candidaturas con firma electrónica 
+(ANEXO A LA INSTRUCCIÓN 7/2011, DE 15 DE SEPTIEMBRE DE 2011, DE LA JUNTA ELECTORAL CENTRAL)
+
+## Introducción
+
+Los avales para las candidaturas electorales deberán presentarse en formato XML y firmados electrónicamente por el avalista. En este documento se detalla el formato del fichero xml a firmar, el tipo de firma a incorporar y el formato del fichero zip a entregar en la Junta Electoral competente.
 
 ## Formato
 
@@ -33,4 +38,24 @@ El fichero de aval firmado deberá verificar las especificaciones siguientes:
 
 2. [XADES] XML Advanced Electronic Signatures ETSI TS 101 903.
 
-El fichero firmado deberá tener, por tanto, la estructura reflejada en el siguiente ejemplo:
+El fichero firmado deberá tener, por tanto, la estructura reflejada en el siguiente ejemplo (Ver BOE-A-2011-14814).
+
+### Nombre de los ficheros XML.
+El fichero anterior deberá almacenarse con el nombre siguiente NNNNNNNNN.xml donde NNNNNNNNN es el NIF/NIE de la persona que avala la candidatura y que además firma el aval. Esto es, es el NIF/NIE del certificado usado para firmar y el NIF/NIE del campo <ID>.
+
+### Formato del fichero ZIP.
+Para cada tipo de elecciones, circunscripción y candidatura se formará un fichero zip con todos los avales correspondientes, con el siguiente nombre:
+
+EEEEEE.CCCCCC.PPPPPP.zip, donde cada campo tiene el siguiente significado:
+
+| Campo | Descripción |
+| --- | --- |
+| EEEEEE | Nombre de elecciones. Sólo se admiten los valores especificados para la etiqueta <elecciones /> del xml de entrega. Éstos valores aparecen recogidos en el esquema. |
+| CCCCCC | Nombre de la circunscripción. Sólo se admiten los valores especificados para la etiqueta <circunscripción /> del xml de entrega. Éstos valores aparecen recogidos en el esquema. |
+| PPPPPP | Nombre de la candidatura. Sólo se admiten los valores especificados para la etiqueta <nombre /> del xml de entrega. Éstos valores aparecen recogidos en el esquema. |
+
+Así por ejemplo, para una candidatura de nombre Candidatura1, que presenta avales al Congreso y al Senado por la circunscripción de Almería, el nombre del fichero sería:
+
+CONGRESO Y SENADO.Almería.Candidatura1.zip, y todos los ficheros xml del fichero zip deberán tener esos valores en las etiquetas correspondientes.
+
+En el supuesto de candidaturas al Congreso y al Senado (elecciones=CONGRESO y SENADO) en las provincias insulares, dado que las circunscripciones de ambas elecciones son distintas, se deberán aportar dos ficheros zip, uno con los avales al Congreso para la circunscripción provincial y otro con los avales al Senado para la circunscripción de la isla o agrupación de islas por la que se pretenda la candidatura.
