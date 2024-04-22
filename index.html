@@ -17,8 +17,22 @@
                 AUTOFIRMA. Asegúrese de que está instalado en su equipo y que dispone de un certificado personal o DNI
                 electrónico.</p>
             <p>Una vez firmado el documento, se generará un archivo XML que podrás enviar a la dirección de correo
-                electrónico:</p>
-            <p>johndoe@example.com</p>
+                electrónico: <strong>@email@</strong></p>
+            <form class="forms">
+                <h2>Datos del Partido</h2>
+                <p>Este es el partido político al que quieres apoyar para que se presente a las elecciones.
+                </p>
+                <h3>@partido@</h3>
+                <label for="nombrepartido">Nombre del partido:</label>
+                <input type="text" id="nombrepartido" name="nombrepartido" placeholder="@partido@" readonly>
+                <br>
+                <label for="elecciones">Elecciones:</label>
+                <input type="text" id="elecciones" name="elecciones" placeholder="@elecciones@" readonly>
+                <br>
+                <label for="circunscripcion">Circunscripción:</label>
+                <input type="text" id="circunscripcion" name="circunscripcion" placeholder="@circunscripcion@" readonly>
+                <br>
+            </form>
             <form id="form-avalista" class="form">
                 <h2>Datos del avalista</h2>
                 <p>Introduce los siguientes datos tal y como aparecen en tu documento de identidad.</p>
@@ -29,16 +43,16 @@
                 <br>
                 <input type="text" id="ape2" name="ape2" placeholder="Tu segundo apellido">
                 <br>
-                <input type="text" onfocus="(this.type='date')" onblur="(this.type='date')" id="fnac" name="fnac" required pattern="\d{4}-\d{2}-\d{2}" placeholder="Fecha de nacimiento">
+                <input type="text" onfocus="(this.type='date')" onblur="(this.type='date')" id="fnac" name="fnac"
+                    required pattern="\d{4}-\d{2}-\d{2}" placeholder="Fecha de nacimiento">
                 <br>
                 <label for="tipoid">Tipo de Documento:</label>
-                <select id="tipoid" name="tipoid" required>
+                <select id="tipoid" name="tipoid" required style="text-align: left;">
                     <option value="1">NIF</option>
                     <option value="2">NIE</option>
                 </select>
-                <br>
-                <label for="id">Número de documento:</label>
-                <input type="text" id="id" name="id" required>
+                <br><br>
+                <input type="text" id="id" name="id" placeholder="Número de documento" required>
                 <br>
                 <button type="button" value="Previsualizar XML" onclick="populateAvalistaXml()">Crear XML</button>
                 <br>
@@ -46,24 +60,24 @@
                     <span class="input" role="textbox" id="xml-preview">Por favor, rellene los campos.</span>
                 </div>
             </form>
-            <form class="forms">
-                <h2>Datos del Partido</h2>
-                <p>Este es el partido político al que quieres apoyar para que se presente a las elecciones indicadas.
-                </p>
-                <label for="nombrepartido">Nombre del partido:</label>
-                <input type="text" id="nombrepartido" name="nombrepartido" placeholder="PARTIDO POLÍTICO" readonly>
-                <br>
-                <label for="elecciones">Elecciones:</label>
-                <input type="text" id="elecciones" name="elecciones" placeholder="PARLAMENTO EUROPEO" readonly>
-                <br>
-                <label for="circunscripcion">Circunscripción:</label>
-                <input type="text" id="circunscripcion" name="circunscripcion" placeholder="Circunscripción única"
-                    readonly>
-                <br>
-            </form>
-            <br>
-
         </div>
+            <p class="message">Esta es una página estática. Todos los datos personales introducidos en esta página son
+                procesados por el equipo del usuario. Ninguna operación ocurre en ningún servidor.</br>
+                El responsable del tratamiento y almacenamiento del archivo XML firmado resultante es el usuario y el
+                dueño de la dirección correo electrónico @email@.</p>
+                <p class="message">El administrador del sitio no tiene afiliación con @partido@. Cualquier partido político
+                    (real o ficticio) puede utilizar esta
+                    herramienta pública. La personalización del sitio va incluida en los parámetros de la URL.</p>
+            <p class="message">Esta herramienta es de código abierto y publicada mediante licencia MIT. Puedes encontrar el código fuente en <a href="https://github.com/nestoroa/aval-candidatura-digital">GitHub</a>.</p>
+            <p>Los parámetros de la URL para utilizar esta herramienta son:</p>
+            <ul>
+                <li><strong>partido</strong>: Nombre del partido político.</li>
+                <li><strong>elecciones</strong>: Tipo de elecciones.</li>
+                <li><strong>circunscripcion</strong>: Circunscripción electoral.</li>
+                <li><strong>email</strong>: Correo electrónico para enviar el archivo XML firmado.</li>
+            </ul>
+            <p>La url de esta página es:</p>
+            <p style="text-align: left;">EXAMPLE.COM/firma.html?partido=@partido@&circunscripcion=@circunscripcion@&elecciones=@elecciones@&email=@email@</p>
     </div>
 </body>
 
