@@ -11,3 +11,28 @@ Esto es un proyecto de página web estática que permite firmar archivos XML uti
 
 # Licencia
 This project is licensed under the [MIT License](LICENSE).
+
+# BOE
+
+## Formato
+
+El formato del fichero sin firmar es el siguiente (ejemplo):
+```xml
+# xml/aval-sin-firmar.xml
+```
+
+La estructura y restricciones de contenido del fichero queda definido por el siguiente fichero xsd (XML Schema Definition).
+```xml
+# xml/aval-sin-firmar.xsd
+```
+
+## Firma
+El fichero a entregar deberá incorporar una firma XMLDsig. Esta firma se incorporará al propio fichero de aval, firmando los datos del nodo «avalcandidatura», esto es, una firma tipo «enveloped».
+
+El fichero de aval firmado deberá verificar las especificaciones siguientes:
+
+1. [XMLDSig] XML Signature Syntax and Processing.
+
+2. [XADES] XML Advanced Electronic Signatures ETSI TS 101 903.
+
+El fichero firmado deberá tener, por tanto, la estructura reflejada en el siguiente ejemplo:
