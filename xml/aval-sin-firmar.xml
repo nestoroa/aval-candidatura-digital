@@ -1,0 +1,17 @@
+<oce>
+    <avalcandidatura>
+        <avalista>
+            <nomb />
+            <ape1 />
+            <ape2 />
+            <fnac />
+            <tipoid />
+            <id />
+        </avalista>
+        <candidatura>
+            <elecciones />
+            <circunscripción />
+            <nombre />
+        </candidatura>
+    </avalcandidatura>
+</oce>
