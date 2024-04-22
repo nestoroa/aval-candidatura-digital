@@ -130,7 +130,7 @@
             <xs:enumeration value="Tenerife"/>
             <xs:enumeration value="La Palma"/>
             <xs:enumeration value="El Hierro"/>
-            <xs:enumeration value="La Gomezra"/>
+            <xs:enumeration value="La Gomera"/>
             <xs:enumeration value="Cantabria"/>
             <xs:enumeration value="Segovia"/>
             <xs:enumeration value="Sevilla"/>
