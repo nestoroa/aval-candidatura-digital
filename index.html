@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Firma tu aval</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/autoscript.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <img src="img/logo.png" alt="logotipo del partido" class="logo">
+        <div class="form">
+            <h1>Recolección de avales</h1>
+            <p>Tras rellenar el formulario y hacer click en el botón de Crear XML, se hará una llamada al cliente de
+                AUTOFIRMA. Asegúrese de que está instalado en su equipo y que dispone de un certificado personal o DNI
+                electrónico.</p>
+            <p>Una vez firmado el documento, se generará un archivo XML que podrás enviar a la dirección de correo
+                electrónico:</p>
+            <p>johndoe@example.com</p>
+            <form id="form-avalista" class="form">
+                <h2>Datos del avalista</h2>
+                <p>Introduce los siguientes datos tal y como aparecen en tu documento de identidad.</p>
+                <!--- Campos para los datos del avalista -->
+                <input type="text" id="nomb" name="nomb" placeholder="Tu nombre" required>
+                <br>
+                <input type="text" id="ape1" name="ape1" placeholder="Tu primer apellido" required>
+                <br>
+                <input type="text" id="ape2" name="ape2" placeholder="Tu segundo apellido">
+                <br>
+                <input type="text" onfocus="(this.type='date')" onblur="(this.type='date')" id="fnac" name="fnac" required pattern="\d{4}-\d{2}-\d{2}" placeholder="Fecha de nacimiento">
+                <br>
+                <label for="tipoid">Tipo de Documento:</label>
+                <select id="tipoid" name="tipoid" required>
+                    <option value="1">NIF</option>
+                    <option value="2">NIE</option>
+                </select>
+                <br>
+                <label for="id">Número de documento:</label>
+                <input type="text" id="id" name="id" required>
+                <br>
+                <button type="button" value="Previsualizar XML" onclick="populateAvalistaXml()">Crear XML</button>
+                <br>
+                <div class="preview">
+                    <span class="input" role="textbox" id="xml-preview">Por favor, rellene los campos.</span>
+                </div>
+            </form>
+            <form class="forms">
+                <h2>Datos del Partido</h2>
+                <p>Este es el partido político al que quieres apoyar para que se presente a las elecciones indicadas.
+                </p>
+                <label for="nombrepartido">Nombre del partido:</label>
+                <input type="text" id="nombrepartido" name="nombrepartido" placeholder="PARTIDO POLÍTICO" readonly>
+                <br>
+                <label for="elecciones">Elecciones:</label>
+                <input type="text" id="elecciones" name="elecciones" placeholder="PARLAMENTO EUROPEO" readonly>
+                <br>
+                <label for="circunscripcion">Circunscripción:</label>
+                <input type="text" id="circunscripcion" name="circunscripcion" placeholder="Circunscripción única"
+                    readonly>
+                <br>
+            </form>
+            <br>
+
+        </div>
+    </div>
+</body>
+
+</html>
