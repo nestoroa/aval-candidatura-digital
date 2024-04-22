@@ -17,14 +17,10 @@ This project is licensed under the [MIT License](LICENSE).
 ## Formato
 
 El formato del fichero sin firmar es el siguiente (ejemplo):
-```xml
-# xml/aval-sin-firmar.xml
-```
+https://github.com/nestoroa/aval-candidatura-digital/blob/main/xml/aval-sin-firmar.xml
 
 La estructura y restricciones de contenido del fichero queda definido por el siguiente fichero xsd (XML Schema Definition).
-```xml
-# xml/aval-sin-firmar.xsd
-```
+https://github.com/nestoroa/aval-candidatura-digital/blob/main/xml/aval-sin-firmar.xsd
 
 ## Firma
 El fichero a entregar deberá incorporar una firma XMLDsig. Esta firma se incorporará al propio fichero de aval, firmando los datos del nodo «avalcandidatura», esto es, una firma tipo «enveloped».
